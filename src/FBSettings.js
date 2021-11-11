@@ -33,7 +33,7 @@ module.exports = {
    */
   setAdvertiserTrackingEnabled(ATE: boolean): Promise<boolean> {
     if (Platform.OS === 'ios') {
-      return Settings.setAdvertiserTrackingEnabled(ATE);
+      return Settings.setAdvertiserTrackingEnabled(true);
     } else {
       return Promise.resolve(false);
     }
